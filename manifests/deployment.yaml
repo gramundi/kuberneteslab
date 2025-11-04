@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kuberneteslab-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kuberneteslab
+  template:
+    metadata:
+      labels:
+        app: kuberneteslab
+    spec:
+      containers:
+      - name: kuberneteslab
+        image: ramundg/readingpods:1.0 # <-- Specify your tag
+        ports:
+        - containerPort: 80 # <-- Change as needed
+      imagePullSecrets:
+      - name: ghcr-secret
