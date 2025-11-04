@@ -9,7 +9,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy your application code
-COPY your_script_name.py .
+COPY listpods.py .
 
 # Command to run your script
-CMD ["python", "your_script_name.py"]
+CMD ["python", "listpods.py"]
