@@ -30,9 +30,11 @@ def list_pods_in_namespace_in_cluster(namespace):
     v1 = client.CoreV1Api()
     # ... (API call and printing logic)
     try:
-        
-            
-            
+        pod_list = v1.list_namespaced_pod(namespace=namespace)
+        print(f"Listing pods in namespace: **{namespace}**")
+        print("-" * 30)
+        for pod in pod_list.items:
+            print(f"Name: {pod.metadata.name}\tStatus: {pod.status.phase}")        
     except ApiException as e:
         print(f"Exception when calling CoreV1Api->list_namespaced_pod: {e}")
 
