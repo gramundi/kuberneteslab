@@ -16,4 +16,4 @@ COPY listpods.py .
 
 # Command to run your script
 #CMD ["python", "listpods.py"]
-CMD ["bash","sleep","1d"]
+#CMD ["bash","sleep","1d"]
