@@ -12,4 +12,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY listpods.py .
 
 # Command to run your script
-CMD ["python", "listpods.py"]
+#CMD ["python", "listpods.py"]
