@@ -22,7 +22,7 @@ jobs:
 
     - name: Build the Docker image
       run: |
-        docker build --no-cache --tag ramundg/readingpods:1.0 .
+        docker build --no-cache --tag ramundg/readingpods:2.0 .
 
     - name: Push the Docker image
       run: |
