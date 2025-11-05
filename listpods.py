@@ -13,7 +13,7 @@ def readingPods(namespace):
         return
     try:
         v1 = client.CoreV1Api()
-        # ... (API call and printing logic)
+        # .... (API call and printing logic)
         pod_list = v1.list_namespaced_pod(namespace=namespace)
         print(f"Listing pods in namespace: **{namespace}**")
         print("-" * 30)
