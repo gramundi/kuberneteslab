@@ -11,11 +11,9 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN rm listpods.py
-
 # Copy your application code
 COPY listpods.py .
 
 # Command to run your script
-CMD ["python", "listpods.py"]
-#CMD ["/bin/bash", "sleep","1d"]
+#CMD ["python", "listpods.py"]
+CMD ["/bin/bash","sleep","1d"]
